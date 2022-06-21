@@ -4,27 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Expenses from "./components/home/home";
-import Invoices from "./components/userMeals/userMeals";
-import Invoice from "./components/invoice";
+import HomePage from "./components/home";
+import UserProfile from "./components/userProfile";
+import About from "./components/about";
+// import Invoice from "./components/invoice";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="expenses" element={<Expenses />} />
-          <Route path="invoices" element={<Invoices />}>
-            <Route
-              index
-              element={
-                <main style={{ padding: "1rem" }}>
-                  <p>Select an invoice</p>
-                </main>
-              }
-            />
-            <Route path=":invoiceId" element={<Invoice />} />
-          </Route>
+          <Route path="/" element={<HomePage />} />
+          <Route path="user-profile" element={<UserProfile />} />
+          <Route path="about" element={<About />} />
           <Route
             path="*"
             element={
