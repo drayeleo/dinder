@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   resources :meals, only: %i[index show]
   resources :restaurants
 
-  post "/login", to: "sessions#create"
   get "/me", to: "users#show"
+  post "/signup", to: "users#create"
+
+  post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
   # Routing logic: fallback requests for React Router.
