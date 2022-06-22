@@ -4,17 +4,20 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./components/home";
+import LandingPage from "./components/landingPage";
 import UserProfile from "./components/userProfile";
 import About from "./components/about";
-// import Invoice from "./components/invoice";
+import SignupPage from "./components/signupPage";
+import LoginPage from "./components/loginPage";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="signup" element={<SignupPage />} />
+          <Route path="login" element={<LoginPage />} />
           <Route path="user-profile" element={<UserProfile />} />
           <Route path="about" element={<About />} />
           <Route
