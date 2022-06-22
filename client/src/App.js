@@ -5,7 +5,7 @@ import Header from "./components/header";
 import Home from "./components/home";
 import About from "./components/about";
 import { useState, useEffect } from "react";
-import MealCards from './components/mealCards';
+// import MealCards from './components/mealCards';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Header onLogout={onLogout} />
       <Outlet context={[user, setUser]} />
-      <MealCards/>
+      {/* <MealCards/> */}
     </div>
   );
 }
