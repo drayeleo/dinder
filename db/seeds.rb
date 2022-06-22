@@ -168,13 +168,13 @@ meal12 =
     restaurant_id: resto3.id
   )
 
-puts "Creating Users..."
+# puts "Creating Users..."
 
-elise =
-  User.create(name: "Elise", username: "elisesadsad", password: "elise123")
-dylan = User.create(name: "Dylan", username: "dylanraye", password: "dylan123")
-johnny =
-  User.create(name: "Johnny", username: "johnnybravo", password: "johnny123")
+# elise =
+#   User.create(name: "Elise", username: "elisesadsad", password: "elise123")
+# dylan = User.create(name: "Dylan", username: "dylanraye", password: "dylan123")
+# johnny =
+#   User.create(name: "Johnny", username: "johnnybravo", password: "johnny123")
 
 puts "Adding UserMeals..."
 
