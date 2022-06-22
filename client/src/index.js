@@ -9,6 +9,8 @@ import UserProfile from "./components/userProfile";
 import About from "./components/about";
 import SignupPage from "./components/signupPage";
 import LoginPage from "./components/loginPage";
+import Home from "./components/home";
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +22,7 @@ ReactDOM.render(
           <Route path="login" element={<LoginPage />} />
           <Route path="user-profile" element={<UserProfile />} />
           <Route path="about" element={<About />} />
+          <Route path="home" element={<Home />} />
           <Route
             path="*"
             element={
