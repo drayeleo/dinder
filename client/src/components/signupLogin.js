@@ -12,7 +12,7 @@ export default function SignupLogin() {
           navigate("/signup");
         }}
       >
-        Signup
+        Sign Up
       </button>
       <h3>Already signed up?</h3>
       <button

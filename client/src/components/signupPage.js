@@ -33,9 +33,6 @@ export default function SignupPage() {
         username: formData.username,
         password: formData.password,
         password_confirmation: formData.passwordConfirmation,
-        // username,
-        // password,
-        // password_confirmation: passwordConfirmation,
       }),
     })
       .then((r) => r.json())
