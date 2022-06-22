@@ -1,6 +1,12 @@
 import { NavLink, Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ onLogout }) {
+  function handleLogout() {
+    fetch("/logout", {
+      method: "DELETE",
+    }).then(() => onLogout());
+  }
+
   return (
     <div>
       <Link to="/">
@@ -15,6 +21,7 @@ export default function Header() {
       >
         <NavLink to="/user-profile">User Profile</NavLink> |{" "}
         <NavLink to="/about">About</NavLink>
+        <button onClick={handleLogout}>Logout</button>
       </nav>
     </div>
   );
