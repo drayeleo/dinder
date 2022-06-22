@@ -4,8 +4,14 @@ import TinderCard from 'react-tinder-card'
 function MealCard({meal}) {
 
 return (
-    <div> {meal}</div>
+    <div> {meal}
+    <h2> hello World </h2>
+    
+    </div>
+    
     )
 }
 
 export default MealCard
+
+
