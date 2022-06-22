@@ -9,7 +9,6 @@ export default function LandingPage() {
     <main style={{ padding: "1rem 0" }}>
       <h2>Landing Page</h2>
       {user ? <HomePage /> : <SignupLogin />}
-      {/* add home page here with ternary statement based on whether someone is logged in */}
     </main>
   );
 }
