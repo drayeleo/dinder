@@ -14,6 +14,8 @@ export default function UserProfile() {
     }
   }, [user]);
 
+  console.log(user)
+  console.log("This is user")
   function renderMeals() {
     return user.meals.map((meal) => {
       return (<SavedMeal meal={meal} />);

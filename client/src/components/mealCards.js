@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react'
 import TinderCard from 'react-tinder-card'
+import { useOutletContext } from "react-router-dom";
 
 
 function MealCards () {
     const [templates, setTemplates] = useState([]);
+    const [user, setUser] = useOutletContext();
 
     useEffect(() => {
         fetch("/meals")
@@ -36,18 +38,41 @@ function MealCards () {
   const canSwipe = currentIndex >= 0
 
   // set last direction and decrease current index
-  const swiped = (direction, nameToDelete, index) => {
+  const swiped = (direction, nameToDelete, meal_id, index) => {
     setLastDirection(direction)
     updateCurrentIndex(index - 1)
+    if (direction == "right") {
+      add_like_meal(user.id, meal_id)
+    }
+  }
+
+  const add_like_meal = (user_id, meal_id) => {
+    fetch("/user_meals", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        user_id: user_id,
+        meal_id: meal_id
+      })
+    })
+    .then(res => {
+        if (res.ok) {
+            res.json()
+            .then(user => {
+                console.log("Successfully inserted!")
+            })
+        } else {
+            res.json()
+            .then(json => console.log("Failed to inserted!"))
+        }
+    })
   }
 
   const outOfFrame = (name, idx) => {
     console.log(`${name} (${idx}) left the screen!`, currentIndexRef.current)
-    // handle the case in which go back is pressed before card goes outOfFrame
     currentIndexRef.current >= idx && childRefs[idx].current.restoreCard()
-    // TODO: when quickly swipe and restore multiple times the same card,
-    // it happens multiple outOfFrame events are queued and the card disappear
-    // during latest swipes. Only the last outOfFrame event should be considered valid
   }
 
   const swipe = async (dir) => {
@@ -76,19 +101,19 @@ function MealCards () {
       />
       <h1></h1>
       <div className='cardContainer'>
-        {db.map((character, index) => (
+        {db.map((meal, index) => (
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
-            key={character.id}
-            onSwipe={(dir) => swiped(dir, character.name, index)}
-            onCardLeftScreen={() => outOfFrame(character.name, index)}
+            key={meal.id}
+            onSwipe={(dir) => swiped(dir, meal.name, meal.id, index)}
+            onCardLeftScreen={() => outOfFrame(meal.name, index)}
           >
             <div
-              style={{ backgroundImage: 'url(' + character.image + ')' }}
+              style={{ backgroundImage: 'url(' + meal.image + ')' }}
               className='card'
             >
-              <h3>{character.name}</h3>
+              <h3>{meal.name}</h3>
             </div>
           </TinderCard>
         ))}
