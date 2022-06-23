@@ -176,15 +176,15 @@ meal12 =
 # johnny =
 #   User.create(name: "Johnny", username: "johnnybravo", password: "johnny123")
 
-puts "Adding UserMeals..."
+# puts "Adding UserMeals..."
 
-UserMeal.create(user_id: elise.id, meal_id: meal8.id)
-UserMeal.create(user_id: elise.id, meal_id: meal7.id)
-UserMeal.create(user_id: elise.id, meal_id: meal1.id)
-UserMeal.create(user_id: elise.id, meal_id: meal9.id)
-UserMeal.create(user_id: dylan.id, meal_id: meal2.id)
-UserMeal.create(user_id: dylan.id, meal_id: meal3.id)
-UserMeal.create(user_id: dylan.id, meal_id: meal8.id)
-UserMeal.create(user_id: dylan.id, meal_id: meal5.id)
+# UserMeal.create(user_id: elise.id, meal_id: meal8.id)
+# UserMeal.create(user_id: elise.id, meal_id: meal7.id)
+# UserMeal.create(user_id: elise.id, meal_id: meal1.id)
+# UserMeal.create(user_id: elise.id, meal_id: meal9.id)
+# UserMeal.create(user_id: dylan.id, meal_id: meal2.id)
+# UserMeal.create(user_id: dylan.id, meal_id: meal3.id)
+# UserMeal.create(user_id: dylan.id, meal_id: meal8.id)
+# UserMeal.create(user_id: dylan.id, meal_id: meal5.id)
 
 puts "Seeding Done!"

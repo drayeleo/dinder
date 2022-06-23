@@ -27,7 +27,8 @@ export default function UserProfile() {
       <div>
         <h1>User Profile</h1>
         <h2>Hello, {user.first_name}!</h2>
-        <h3>Here are your saved meals:</h3>
+        {user.meals[0] ? <h3>Here are your saved meals:</h3> : <h3>You haven't liked any meals yet</h3> }
+        
         {renderMeals()}
       </div>
     );
