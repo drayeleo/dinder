@@ -14,6 +14,8 @@ class UsersController < ApplicationController
     if user.valid?
       render json: user, status: :created
     else
+      # puts "error in users_controller create function: user not valid"
+      # byebug
       render json: {
                errors: user.errors.full_messages
              },
