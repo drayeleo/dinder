@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
+import SavedMeal from "./savedMeal";
 
 export default function UserProfile() {
   const [user, setUser] = useOutletContext();
@@ -15,7 +16,7 @@ export default function UserProfile() {
 
   function renderMeals() {
     return user.meals.map((meal) => {
-      return <h3 key={meal.id} >{meal.name}</h3>;
+      return (<SavedMeal meal={meal} />);
     });
   }
 

@@ -1,4 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :meals
+  attributes :id, :username, :first_name, :last_name
   has_many :meals
 end
