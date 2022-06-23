@@ -13,7 +13,7 @@ export default function Header({ onLogout, user }) {
       <Link to="/">
         <h1>Dinder</h1>
       </Link>
-      <h3>What's for dinner?</h3>
+      <h3> What's for dinner?</h3>
       <nav
         style={{
           borderBottom: "solid 1px",

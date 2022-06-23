@@ -1,6 +1,6 @@
 class MealsController < ApplicationController
   def index
-    render json: Meal.all
+    render json: Meal.all.shuffle
   end
 
   def show

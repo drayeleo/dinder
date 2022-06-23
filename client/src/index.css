@@ -13,7 +13,7 @@ code {
 }
 
 
-/* ###### TEST **********/
+/* ###### HOME PAGE **********/
 
 #root {
   text-align: center;
@@ -23,7 +23,7 @@ code {
   min-height: 100vh;
   overflow: hidden;
   /* background: linear-gradient(#fff, #999); */
-  background: linear-gradient(#df9371, #c78e43);
+  background: linear-gradient(#df9371,#c78e43);
 }
 
 #root>div {
@@ -52,6 +52,8 @@ h1 {
   font-family: 'Damion', cursive;
   color: #fff;
   text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  /* font-size: xx-large; */
+  font-size: 300%;
 }
 
 h2 {
@@ -66,18 +68,26 @@ h2 {
   width: 90vw;
   max-width: 260px;
   height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
-  position: relative;
-  background-color: #fff;
+  /* position: relative; */
+  background-color: rgb(190, 144, 144);
   width: 80vw;
   max-width: 260px;
-  height: 300px;
-  box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
-  border-radius: 20px;
+  height: 270px;
+  box-shadow: 0px 0px 40px 0px rgba(211, 195, 169, 0.3);
+  border-radius: 15px;
   background-size: cover;
   background-position: center;
+  position: center;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cardContent {
@@ -107,8 +117,10 @@ h2 {
 }
 
 .buttons {
-  margin: 20px;
-  display: flex;
+  margin: 70px;
+  /* display: flex; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons button {
@@ -138,4 +150,10 @@ h2 {
   57%  { transform: scale(1,1) }
   64%  { transform: scale(1,1) }
   100% { transform: scale(1,1) }
+}
+
+/* ###### HEADER **********/
+
+.home header {
+
 }
