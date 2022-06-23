@@ -13,6 +13,8 @@ export default function UserProfile() {
     }
   }, [user]);
 
+  console.log(user)
+  console.log("This is user")
   function renderMeals() {
     return user.meals.map((meal) => {
       return <h3 key={meal.id} >{meal.name}</h3>;
