@@ -4,6 +4,13 @@ function About() {
   return (
     <main style={{ padding: "1rem 0" }}>
       <h2>About</h2>
+      <p>Dinder is your ticket to the next best meal of your life.</p>
+      <p>Bored? Uninspired? Indecisive? We've got you.</p>
+      <p>Just swipe through the app to explore the best that Denver's food scene has to offer.</p>
+      <p>👉Left swipe means "No Thanks", right swipe is "YES PLEASE"👈</p>
+      <p>And then, we'll save all your liked meals so you can come back to them again and again</p>
+      {/* <p></p>
+      <p></p> */}
     </main>
   );
 }

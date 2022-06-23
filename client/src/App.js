@@ -34,7 +34,7 @@ function App() {
   if (sessionCheckComplete) {
     return (
       <div className="App">
-        <Header onLogout={onLogout} />
+        <Header onLogout={onLogout} user={user} />
         <Outlet context={[user, setUser]} />
         {/* <MealCards/> */}
       </div>

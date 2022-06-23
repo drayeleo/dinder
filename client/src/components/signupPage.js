@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useOutletContext, useNavigate } from "react-router-dom";
 
 export default function SignupPage() {
-  const [user, setUser] = useOutletContext();
+  let navigate = useNavigate();
 
+  const [user, setUser] = useOutletContext();
+  
+  const [errors, setErrors] = useState(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -12,9 +15,12 @@ export default function SignupPage() {
     passwordConfirmation: "",
   });
 
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  useEffect(() => {
+    if (user) {
+      // console.log("navigating to homepage")
+      navigate("/");
+    }
+  }, [user]);
 
   function handleFormInput(event) {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -34,9 +40,21 @@ export default function SignupPage() {
         password: formData.password,
         password_confirmation: formData.passwordConfirmation,
       }),
-    })
-      .then((r) => r.json())
-      .then(setUser(formData.username));
+    }).then((res) => {
+        if (res.ok) {
+          res.json().then((user) => {
+            setUser(user);
+          });
+        } else {
+          res.json().then((json) => {
+            // setUser(null);
+            // console.log("json: ", json)
+            setErrors(json.errors);
+            console.log("errors: ", json.errors)
+          });
+        }
+      }
+      );
   }
 
   return (
@@ -84,6 +102,7 @@ export default function SignupPage() {
           onChange={(e) => handleFormInput(e)}
         />
         <button type="submit">Submit</button>
+        {errors ? <p>Error: {errors}</p> : null }
       </form>
     </main>
   );

@@ -1,19 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
+  
   const [user, setUser] = useOutletContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
-  // if (user) {
-  //   navigate("/");
-  // }
+  useEffect(() => {
+    if (user) {
+      // console.log("navigating to homepage")
+      navigate("/");
+    }
+  }, [user]);
 
   function handleSubmit(e) {
     e.preventDefault();
+
     fetch("/login", {
       method: "POST",
       headers: {
@@ -27,8 +32,9 @@ export default function LoginPage() {
         });
       } else {
         res.json().then((json) => {
-          setUser(null);
+          // setUser(null);
           setError(json.error);
+          console.log("error: ", json.error)
         });
       }
     });
@@ -64,6 +70,7 @@ export default function LoginPage() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
+        {error ? <p>Error: {error}</p> : null }
       </form>
     </main>
   );

@@ -5,7 +5,7 @@ export default function SignupLogin() {
 
   return (
     <main style={{ padding: "1rem 0" }}>
-      <h2>Signup/Login</h2>
+      {/* <h2>Signup/Login</h2> */}
       <h3>New to Dinder? Make an account!</h3>
       <button
         onClick={() => {
