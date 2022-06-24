@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
-export default function SavedMeal({ meal}) {
+export default function SavedMeal({ meal, updateUser}) {
   const [showDetails, setShowDetails] = useState(false)
   const [user, setUser] = useOutletContext();
 
@@ -18,6 +18,7 @@ export default function SavedMeal({ meal}) {
       </div>
     )
   }
+  
   function handleDelete() {
 
     fetch(`/user_meals/${user.id}?meal_id=${meal.id}`, {
@@ -29,7 +30,7 @@ export default function SavedMeal({ meal}) {
       .catch((err) => console.log("🔥", err))
       .then(
         // update user.meals with removed meal
-        console.log("delete!")
+        updateUser(meal.id)
         );
   }
 

@@ -7,21 +7,31 @@ export default function SignupLogin() {
     <main style={{ padding: "1rem 0" }}>
       {/* <h2>Signup/Login</h2> */}
       <h3>New to Dinder? Make an account!</h3>
-      <button
-        onClick={() => {
+
+      <div className='buttons'>
+      <button style={{ backgroundColor: '#c3c4d3' }} onClick={() => {
           navigate("/signup");
-        }}
-      >
-        Sign Up
-      </button>
+        }}>Sign Up</button>
+      </div>
+
+
+
       <h3>Already signed up?</h3>
-      <button
+
+      <div className='buttons'>
+      <button style={{ backgroundColor: '#c3c4d3' }} onClick={() => {
+          navigate("/login");
+        }}>Log In</button>
+      </div>
+
+
+      {/* <button
         onClick={() => {
           navigate("/login");
         }}
       >
         Login
-      </button>
+      </button> */}
     </main>
   );
 }

@@ -17,6 +17,15 @@ class UserMealsController < ApplicationController
         end
         head :no_content
     end
+    
+    def last_meals
+        lastmeal = UserMeal.order("created_at").last
+        if lastmeal
+            lastmeal.destroy
+        end
+        head :no_content
+    end
+
 
     private
 

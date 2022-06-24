@@ -19,7 +19,7 @@ export default function Header({ onLogout, user }) {
           paddingBottom: "1rem",
         }}
       >
-        <Link to="/">
+        <Link style={{textDecoration: 'none'}} to="/">
           <h1 className="testheader"> dinder
           </h1>
         </Link>
