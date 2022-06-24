@@ -104,7 +104,7 @@ h2 {
   bottom: 0;
   margin: 10px;
   color: #fff;
-  text-shadow: 2px 2px 6px #999;
+  text-shadow: 2px 2px 6px #202020;
 }
 
 .infoText {
@@ -250,4 +250,56 @@ h2 {
   cursor: pointer;
   font-family: "Bungee", cursive;
   font-size: 2rem;
+}
+
+.savedMeal {
+  position: relative;
+  text-align: center;
+  width: 270px;
+  /* max-width: 260px; */
+  height: 270px;
+
+  /* background-color: rgb(190, 144, 144); */
+  
+  /* box-shadow: 0px 0px 40px 0px rgb(211 195 169 / 30%); */
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  position: center;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  text-shadow: 2px 2px 6px #202020;
+
+  font-weight: bold;
+}
+
+.savedMeal h3 {
+  position: absolute;
+  bottom: 10px;
+  /* left: 25%; */
+}
+
+.savedMeal div {
+  position: absolute;
+  top: 40px;
+  padding: 25px;
+  /* left: 25%; */
+
+  /* width: 80vw;
+  max-width: 260px;
+  height: 270px; */
+}
+
+.savedMeal img   {
+  width: 270px;
+  /* max-width: 260px; */
+  height: 270px;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0px 0px 40px 10px rgb(211 195 169);
 }

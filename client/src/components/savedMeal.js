@@ -12,9 +12,9 @@ export default function SavedMeal({ meal, updateUser}) {
   function renderRestaurantDetails() {
     return(
       <div> 
-        <p>Restaurant Name: {meal.restaurant.name}</p>
-        <p>Address: {meal.restaurant.address}</p>
-        <p>Phone Number: {meal.restaurant.phone_number}</p>
+        <p>{meal.restaurant.name}</p>
+        <p>{meal.restaurant.address}</p>
+        <p>{meal.restaurant.phone_number}</p>
       </div>
     )
   }
@@ -36,8 +36,9 @@ export default function SavedMeal({ meal, updateUser}) {
 
   return (
   <div>
-    <div onClick={handleClick}>
-        <img style={{width: "200px"}} src={meal.image} alt={meal.name} />
+    <div className="savedMeal" onClick={handleClick}>
+        <img  src={meal.image} alt={meal.name} /> 
+        {/* style={{width: "200px"}} */}
         <h3 key={meal.id} >{meal.name}</h3>
         {showDetails ? renderRestaurantDetails() : null }
     </div>
