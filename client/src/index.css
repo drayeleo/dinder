@@ -214,6 +214,11 @@ h2 {
 }
 
 
+.cardImage {
+  max-width: 20%;
+  max-height: 20%;
+}
+
 /* ######### User Page #########
 
 .delete-button {

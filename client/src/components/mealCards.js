@@ -159,7 +159,7 @@ function MealCards () {
         </h2>
       ) : (
         <h2 className='infoText'>
-          Swipe a card or press a button to get Restore Card button visible!
+          Swipe a card or press a button to save your liked Meals!
         </h2>
       )}
     </div>
