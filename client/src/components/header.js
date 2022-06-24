@@ -12,23 +12,25 @@ export default function Header({ onLogout, user }) {
 
   return (
     <div>
-      <Link to="/">
-        <h1 className="testheader"> dinder
-        </h1>
-      </Link>
-      <h3 className="tagline"> What's for dinner?
-      </h3>
-      <nav
+      
+      <header
         style={{
           borderBottom: "solid 1px",
           paddingBottom: "1rem",
         }}
       >
-        {user ? <><NavLink to="/user-profile">User Profile</NavLink> |{" "}</> : null}
-        <NavLink to="/about">About</NavLink>
-        {user ? <button onClick={handleLogout}>Logout</button> : null}
-        
-      </nav>
+        <Link to="/">
+          <h1 className="testheader"> dinder
+          </h1>
+        </Link>
+        <h3 className="tagline"> What's for dinner?
+        </h3>
+        <nav>
+          {user ? <><NavLink to="/user-profile"><button className="navButton" >User Profile</button></NavLink> |{" "}</> : null}
+          <NavLink to="/about"><button className="navButton" >About</button></NavLink>
+          {user ? <> |{" "}<button className="navButton" onClick={handleLogout}>Logout</button></> : null}          
+        </nav>
+      </header>
     </div>
   );
 }
