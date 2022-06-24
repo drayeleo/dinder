@@ -234,6 +234,7 @@ h2 {
 .cardImage {
   max-width: 20%;
   max-height: 20%;
+
 }
 
 /* ######### User Page #########
@@ -302,4 +303,18 @@ h2 {
   object-fit: cover;
   border-radius: 30px;
   box-shadow: 0px 0px 40px 10px rgb(211 195 169);
+}
+.signupform {
+  padding-top: 25px;
+}
+
+.submitbutton {
+  color: #000;
+  margin-top: 100px;
+  background-color: #9198e5;
+  font-size: 1.0rem;
+  margin: 1rem;
+  padding: 0.5rem 1.0rem;
+  border: 2px solid #9198e5;
+  border-radius: 10px
 }
