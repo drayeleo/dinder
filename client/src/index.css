@@ -23,7 +23,7 @@ code {
   min-height: 100vh;
   overflow: hidden;
   /* background: linear-gradient(#fff, #999); */
-  background: linear-gradient(#df9371,#c78e43);
+  background: linear-gradient(#e66465, #9198e5);
 }
 
 #root>div {
@@ -154,6 +154,48 @@ h2 {
 
 /* ###### HEADER **********/
 
-.home header {
+.header{
+  padding-top: 50px;
+}
 
+.testheader{
+  font-family: 'ProximaNova';
+  color: white;
+  text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  /* font-size: xx-large; */
+  font-size: 400%;
+}
+
+.tagline {
+  font-family: 'ProximaNova';
+  color: rgb(29, 23, 23);
+  text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  /* font-size: xx-large; */
+  font-size: 180%;
+  letter-spacing: 5px;
+}
+
+/* ###### ABOUT PAGE **********/
+.about-me-section {
+  background-color: teal;
+  color: white;
+  margin-top: 5em;
+  padding: 3em;
+}
+
+
+/* ######### User Page #########
+
+.delete-button {
+  /* margin-left: 12rem;*/
+
+.delete-button {
+  margin-top: 2rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-family: "Bungee", cursive;
+  font-size: 2rem;
 }

@@ -1,5 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 
+
+
 export default function Header({ onLogout, user }) {
 
   function handleLogout() {
@@ -11,9 +13,11 @@ export default function Header({ onLogout, user }) {
   return (
     <div>
       <Link to="/">
-        <h1>Dinder</h1>
+        <h1 className="testheader"> dinder
+        </h1>
       </Link>
-      <h3> What's for dinner?</h3>
+      <h3 className="tagline"> What's for dinner?
+      </h3>
       <nav
         style={{
           borderBottom: "solid 1px",

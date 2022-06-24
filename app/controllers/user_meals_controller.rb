@@ -11,8 +11,10 @@ class UserMealsController < ApplicationController
     end
 
     def destroy
-        usermeal = UserMeal.find_by(user_id: params[:id],meal_id: params[:meal_id])
-        usermeal.destroy
+        usermeal = UserMeal.find_by(user_id: params[:id], meal_id: params[:meal_id])
+        if usermeal
+            usermeal.destroy
+        end
         head :no_content
     end
 

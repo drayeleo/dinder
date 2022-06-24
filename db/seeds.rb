@@ -69,7 +69,7 @@ meal1 =
   Meal.create(
     name: "Iced Shellfish Platter",
     image:
-      "https://media1.westword.com/den/imager/u/blog/13405699/20220203_193214.jpg?cb=1644524189",
+      "https://media2.dallasobserver.com/dal/imager/u/magnum/9074616/iced_shellfish_platter_4_1_.jpg?cb=1642547315",
     price: 56.00,
     restaurant_id: resto1.id
   )
@@ -78,7 +78,7 @@ meal2 =
   Meal.create(
     name: "The Rancher",
     image:
-      "https://d30ec9yrj6srx8.cloudfront.net/f3aa3eed391a01276962815b05594825_file.jpeg",
+      "https://images.gotruckster.com/foodtruck/448/cover_photo/25659689_2005207136424902_5784619384563713838_n.jpg",
     price: 17.00,
     restaurant_id: resto2.id
   )
@@ -102,7 +102,7 @@ meal4 =
 
 meal5 =
   Meal.create(
-    name: "The Trio",
+    name: "The Taco Trio",
     image:
       "https://img2.10bestmedia.com/Images/Photos/284844/p-Machete-Plate-Drink_55_660x440.jpg",
     price: 16.00,
@@ -113,7 +113,7 @@ meal6 =
   Meal.create(
     name: "Surf and Turf",
     image:
-      "https://cdn.vox-cdn.com/thumbor/PKmrJC3s8AwjXkQGO0iuiI6-uag=/0x0:1913x1303/920x613/filters:focal(804x499:1110x805):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63199235/oceanprime.0.png",
+      "https://scontent.fapa1-2.fna.fbcdn.net/v/t1.6435-9/109768488_1424034117787370_1594547337877836122_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=973b4a&_nc_ohc=rKcFSkJqqw0AX-JB0QY&_nc_ht=scontent.fapa1-2.fna&oh=00_AT_c2x_BWCZmTQ0Hz5fBRfBeq5vnN6OSpNT45d8ZauKCDw&oe=62DB58E5",
     price: 47.50,
     restaurant_id: resto6.id
   )
@@ -139,7 +139,7 @@ meal9 =
   Meal.create(
     name: "Tofu Scramble",
     image:
-      "https://images.happycow.net/venues/200x200/52/01/hcmp52012_1167013.jpeg",
+      "https://images.happycow.net/venues/1024/52/01/hcmp52012_1310885.jpeg",
     price: 20.00,
     restaurant_id: resto9.id
   )
@@ -155,7 +155,7 @@ meal11 =
   Meal.create(
     name: "Avocado Toast",
     image:
-      "https://images.happycow.net/venues/1024/24/95/hcmp24954_463724.jpeg",
+      "https://www.gannett-cdn.com/presto/2019/09/10/USAT/66013734-016c-42bf-9f1b-aa7f4f9a8415-IMG_2568_2.jpg",
     price: 19.00,
     restaurant_id: resto9.id
   )
@@ -176,7 +176,8 @@ meal12 =
 # johnny =
 #   User.create(name: "Johnny", username: "johnnybravo", password: "johnny123")
 
-# puts "Adding UserMeals..."
+
+puts "Adding UserMeals..."
 
 # UserMeal.create(user_id: elise.id, meal_id: meal8.id)
 # UserMeal.create(user_id: elise.id, meal_id: meal7.id)
