@@ -104,6 +104,7 @@ h2 {
   bottom: 0;
   margin: 10px;
   color: #fff;
+  text-shadow: 2px 2px 6px #999;
 }
 
 .infoText {
