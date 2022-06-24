@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import SavedMeal from "./savedMeal";
 
@@ -18,7 +18,7 @@ export default function UserProfile() {
   console.log("This is user")
   function renderMeals() {
     return user.meals.map((meal) => {
-      return (<SavedMeal meal={meal} />);
+      return (<SavedMeal meal={meal} key={meal.id} />);
     });
   }
 

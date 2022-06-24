@@ -60,12 +60,22 @@ function MealCards () {
     .then(res => {
         if (res.ok) {
             res.json()
-            .then(user => {
+            .then(userMeal => {
                 console.log("Successfully inserted!")
+                console.log("userMeal: ", userMeal )
+               // let meals = [...user.meals, userMeal.meal];
+                // debugger                
+                // () => setUser({...user, meals});
+                //setUser({...user, meals})
+                setUser((user)=> { 
+                  let meals = [...user.meals, userMeal.meal];
+                  return {...user, meals}
+                }
+                )
             })
         } else {
             res.json()
-            .then(json => console.log("Failed to inserted!"))
+            .then(json => console.log("Failed to insert!"))
         }
     })
   }
@@ -79,6 +89,7 @@ function MealCards () {
     if (canSwipe && currentIndex < db.length) {
       await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
     }
+    console.log(`swiped ${dir}!`)
   }
 
   // increase current index and show card

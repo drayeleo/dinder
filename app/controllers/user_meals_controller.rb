@@ -7,7 +7,7 @@ class UserMealsController < ApplicationController
 
     def create
         usermeal = UserMeal.create!(user_meals_params)
-        render json: usermeal, status: :created
+        render json: usermeal, include: ['meal', 'meal.restaurant'], status: :created
     end
 
     def destroy

@@ -1,10 +1,8 @@
 // import "./App.css";
 import React from "react";
-import { Route, Routes, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Header from "./components/header";
 
-import Home from "./components/home";
-import About from "./components/about";
 import { useState, useEffect } from "react";
 // import MealCards from './components/mealCards';
 
