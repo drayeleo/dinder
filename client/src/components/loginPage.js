@@ -1,6 +1,20 @@
 import { useState, useEffect } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
+const inputStyles = {
+  padding: "10px",
+  border: "3px solid #9198e5",
+  boxShadow: "0px 0px 0px",
+  color: "#3a46c2;",
+  font_size: "18px",
+  background_color: "#9198e5",
+  outline: "10px",
+  borderRadius: "10px",
+  width: "20%",
+  margin: "10px 0",
+
+};
+
 export default function LoginPage() {
   let navigate = useNavigate();
   
@@ -56,7 +70,8 @@ export default function LoginPage() {
       <h2>Login Page</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
-        <input
+        <input 
+          style ={inputStyles}
           type="text"
           id="username"
           value={username}
@@ -64,12 +79,13 @@ export default function LoginPage() {
         />
         <label htmlFor="password">Password:</label>
         <input
+          style ={inputStyles}
           type="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit" className= "submitbutton">Login</button>
         {error ? <p>Error: {error}</p> : null }
       </form>
     </main>

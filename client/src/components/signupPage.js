@@ -1,6 +1,20 @@
 import { useState, useEffect } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
+const inputStyles = {
+  padding: "10px",
+  border: "3px solid #9198e5",
+  boxShadow: "0px 0px 0px",
+  color: "#3a46c2;",
+  font_size: "18px",
+  background_color: "#9198e5",
+  outline: "10px",
+  borderRadius: "10px",
+  width: "20%",
+  margin: "10px 0",
+
+};
+
 export default function SignupPage() {
   let navigate = useNavigate();
 
@@ -59,51 +73,57 @@ export default function SignupPage() {
 
   return (
     <main style={{ padding: "1rem 0" }}>
-      <h2>Signup Page</h2>
+      <h2 >Signup Page</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">First Name:</label>
-        <input
+        <label className ="signupform" htmlFor="firstName"></label>
+        <input style ={inputStyles} 
           type="text"
           id="firstName"
           name="firstName"
+          placeholder=" First Name"
           value={formData.firstName}
           onChange={(e) => handleFormInput(e)}
         />
-        <label htmlFor="lastName">Last Name:</label>
-        <input
+        <label htmlFor="lastName"></label>
+        <input style ={inputStyles} 
           type="text"
           id="lastName"
           name="lastName"
+          placeholder="Last Name"
           value={formData.lastName}
           onChange={(e) => handleFormInput(e)}
         />
-        <label htmlFor="username">Username:</label>
-        <input
+        <label htmlFor="username"></label>
+        <input style ={inputStyles} 
           type="text"
           id="username"
           name="username"
+          placeholder="Username"
           value={formData.username}
           onChange={(e) => handleFormInput(e)}
         />
-        <label htmlFor="password">Password:</label>
-        <input
+        <label htmlFor="password"></label>
+        <input style ={inputStyles} 
           type="password"
           id="password"
           name="password"
           value={formData.password}
+          placeholder="Password"
           onChange={(e) => handleFormInput(e)}
         />
-        <label htmlFor="passwordConfirmation">Confirm Password:</label>
-        <input
+        <label htmlFor="passwordConfirmation"></label>
+        <input style ={inputStyles} 
           type="password"
           id="passwordConfirmation"
           name="passwordConfirmation"
+          placeholder="Confirm Password"
           value={formData.passwordConfirmation}
           onChange={(e) => handleFormInput(e)}
         />
-        <button type="submit">Submit</button>
+        <button  type="submit" className= "submitbutton" >Submit</button>
         {errors ? <p>Error: {errors}</p> : null }
       </form>
     </main>
   );
 }
+
