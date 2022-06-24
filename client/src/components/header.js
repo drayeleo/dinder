@@ -12,10 +12,11 @@ export default function Header({ onLogout, user }) {
 
   return (
     <div>
-      <Link to="/">
+      <Link style={{textDecoration: 'none'}} to="/" >
         <h1 className="testheader"> dinder
         </h1>
       </Link>
+    
       <h3 className="tagline"> What's for dinner?
       </h3>
       <nav
