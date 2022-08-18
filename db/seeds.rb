@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Clearing prior meal data from database" # will also delete UserMeal records
+Meal.destroy_all
 
 puts "Creating Restaurants..."
 
@@ -109,14 +111,15 @@ meal5 =
     restaurant_id: resto5.id
   )
 
-meal6 =
-  Meal.create(
-    name: "Surf and Turf",
-    image:
-      "https://scontent.fapa1-2.fna.fbcdn.net/v/t1.6435-9/109768488_1424034117787370_1594547337877836122_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=973b4a&_nc_ohc=rKcFSkJqqw0AX-JB0QY&_nc_ht=scontent.fapa1-2.fna&oh=00_AT_c2x_BWCZmTQ0Hz5fBRfBeq5vnN6OSpNT45d8ZauKCDw&oe=62DB58E5",
-    price: 47.50,
-    restaurant_id: resto6.id
-  )
+# meal6 =
+#   Meal.create(
+#     name: "Surf and Turf",
+#     image:
+#       # "https://scontent.fapa1-2.fna.fbcdn.net/v/t1.6435-9/109768488_1424034117787370_1594547337877836122_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=973b4a&_nc_ohc=rKcFSkJqqw0AX-JB0QY&_nc_ht=scontent.fapa1-2.fna&oh=00_AT_c2x_BWCZmTQ0Hz5fBRfBeq5vnN6OSpNT45d8ZauKCDw&oe=62DB58E5",
+#       "https://cdn.vox-cdn.com/thumbor/Ded-Js5Nj8Vtx1uhc2BIy6SNwfI=/1400x788/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/15945269/oceanprime.png",
+#     price: 47.50,
+#     restaurant_id: resto6.id
+#   )
 
 meal7 =
   Meal.create(
@@ -176,8 +179,7 @@ meal12 =
 # johnny =
 #   User.create(name: "Johnny", username: "johnnybravo", password: "johnny123")
 
-
-puts "Adding UserMeals..."
+# puts "Adding UserMeals..."
 
 # UserMeal.create(user_id: elise.id, meal_id: meal8.id)
 # UserMeal.create(user_id: elise.id, meal_id: meal7.id)
@@ -188,4 +190,4 @@ puts "Adding UserMeals..."
 # UserMeal.create(user_id: dylan.id, meal_id: meal8.id)
 # UserMeal.create(user_id: dylan.id, meal_id: meal5.id)
 
-puts "Seeding Done!"
+# puts "Seeding Done!"
